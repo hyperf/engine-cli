@@ -1,5 +1,7 @@
-# component-creator
+# Cli Engine
+
+[![PHPUnit](https://github.com/hyperf/engine-cli/actions/workflows/test.yml/badge.svg)](https://github.com/hyperf/engine-cli/actions/workflows/test.yml)
 
 ```
-composer create-project hyperf/component-creator
+composer require hyperf/engine-cli
 ```
