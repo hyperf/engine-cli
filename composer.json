@@ -29,6 +29,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
+        "hyperf/di": "^3.0",
         "hyperf/framework": "^3.0",
         "hyperf/http-server": "^3.0",
         "mockery/mockery": "^1.4",
@@ -49,7 +50,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "2.10-dev"
+            "dev-main": "2.10-dev"
         },
         "hyperf": {
             "config": "Hyperf\\Engine\\ConfigProvider"

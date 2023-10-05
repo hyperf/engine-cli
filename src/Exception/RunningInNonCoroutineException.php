@@ -12,4 +12,6 @@ declare(strict_types=1);
 
 namespace Hyperf\Engine\Exception;
 
-class RunningInNonCoroutineException extends RuntimeException {}
+class RunningInNonCoroutineException extends RuntimeException
+{
+}

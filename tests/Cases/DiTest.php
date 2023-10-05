@@ -10,8 +10,15 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-namespace Hyperf\Engine\Exception;
+namespace HyperfTest\Cases;
 
-class RuntimeException extends \RuntimeException
+/**
+ * @internal
+ * @coversNothing
+ */
+class DiTest extends AbstractTestCase
 {
+    public function testDepthGuard()
+    {
+    }
 }

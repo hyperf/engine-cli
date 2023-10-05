@@ -19,7 +19,9 @@ use Hyperf\Engine\Exception\RuntimeException;
 
 class Coroutine implements CoroutineInterface
 {
-    public function __construct(callable $callable) {}
+    public function __construct(callable $callable)
+    {
+    }
 
     public function execute(...$data): static
     {
