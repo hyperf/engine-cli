@@ -1,0 +1,65 @@
+{
+    "name": "hyperf/engine-cli",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf"
+    ],
+    "description": "Coroutine engine provided by swow.",
+    "autoload": {
+        "psr-4": {
+            "Hyperf\\Engine\\": "src/"
+        },
+        "files": [
+            "constants.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\": "tests"
+        }
+    },
+    "replace": {
+        "hyperf/engine": "~2.10.0"
+    },
+    "require": {
+        "php": ">=8.0",
+        "hyperf/engine-contract": "~1.9.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "hyperf/framework": "^3.0",
+        "hyperf/http-server": "^3.0",
+        "mockery/mockery": "^1.4",
+        "phpstan/phpstan": "^1.0",
+        "phpunit/phpunit": "^9.4",
+        "psr/log": "^1.0|^2.0|^3.0"
+    },
+    "suggest": {
+        "hyperf/http-server": "Required to use ResponseEmitter.",
+        "psr/log": "Required to use HttpServer.",
+        "hyperf/contract": "Required to use ServerFactory."
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.10-dev"
+        },
+        "hyperf": {
+            "config": "Hyperf\\Engine\\ConfigProvider"
+        }
+    },
+    "scripts": {
+        "test": "phpunit -c phpunit.xml --colors=always",
+        "analyse": "phpstan analyse --memory-limit 1024M -l 2 -c phpstan.neon ./src",
+        "s-test": "php -dextension=swow vendor/bin/phpunit -c phpunit.xml --colors=always",
+        "s-analyse": "php -dextension=swow vendor/bin/phpstan analyse --memory-limit 1024M -l 2 -c phpstan.neon ./src",
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
